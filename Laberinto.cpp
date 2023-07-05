@@ -18,7 +18,7 @@ Laberinto::Laberinto() {
  * si la fila es menor a 0 o mayor a FILAS o la columna es menor a 0 o mayor a COLUMNAS retorna un espacio en blanco.
  * @param fila posición en la fila.
  * @param columna posición en la columna.
- * @return
+ * @return booleano que indica si es un camino o no.
  */
 bool Laberinto::esCamino (int fila, int columna) const {
     if ( fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS ||  matriz[ fila ][ columna ] == '#') {
@@ -43,7 +43,7 @@ const int Laberinto::getColumnas() {
     return COLUMNAS;
 }
 /**
- * Imprime el laberinto en consola.
+ * Método que imprime el laberinto en consola.
  */
 void Laberinto::imprimirLaberinto() {
     for (int fila = 0; fila < FILAS; fila++) {
